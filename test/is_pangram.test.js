@@ -10,8 +10,10 @@ describe('isPangram()', () => {
     const text = 'the quick brown fox jumps over the lazy dog';
 
     // Act
+    const answer = isPangram(text);
 
     // Assert
+    expect(answer).toBe(true);
   });
 
   test('works with "abcdefghijklmnopqrstuvwxyz"', () => {
