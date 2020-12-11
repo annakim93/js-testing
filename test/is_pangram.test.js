@@ -18,48 +18,63 @@ describe('isPangram()', () => {
 
   test('works with "abcdefghijklmnopqrstuvwxyz"', () => {
     // Arrange
+    const text = 'abcdefghijklmnopqrstuvwxyz';
 
     // Act
+    const answer = isPangram(text);
 
     // Assert
-
+    expect(answer).toEqual(true);
   });
 
   test("missing character 'x'", () => {
     // Arrange
+    const text = 'abcdefghijklmnopqrstuvwyz';
 
     // Act
+    const answer = isPangram(text);
 
     // Assert
-
+    expect(answer).toBe(false);
   });
 
   test('empty sentence', () => {
     // Arrange
+    const text = '';
 
     // Act
+    const answer = isPangram(text);
 
     // Assert
-
+    expect(answer).toEqual(false);
   });
 
   test('pangram with underscores instead of spaces works', () => {
-    // Arrange
+    const text = 'the_quick brown_fox jumps over the lazy dog';
 
     // Act
+    const answer = isPangram(text);
 
     // Assert
-
+    expect(answer).toBe(true);
   });
 
   test('pangram with numbers', () => {
     // Arrange
+    const text = 'a4bc6de8fghi4jk2l3mnop8q2rstu8vw9xyz';
 
     // Act
+    const answer = isPangram(text);
 
     // Assert
-
+    expect(answer).toEqual(true);
   });
 
-  // Write your own test case
+  test('pangram no letters', ()=> {
+    const text = '9823904((*#$(!';
+
+    const answer = isPangram(text);
+
+    expect(answer).toBe(false);
+  });
 });
