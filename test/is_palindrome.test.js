@@ -67,7 +67,7 @@ describe('isPalindrome()', () => {
     const answer = isPalindrome(text);
 
     // Assert
-    expect(answer).toEqual(true);
+    expect(answer).toEqual(false);
   });
 
   test('Palindrome mixed case', ()=> {
